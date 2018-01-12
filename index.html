@@ -13,11 +13,10 @@
     <link rel="Bookmark" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="js/lib/layui-v2.2.5/css/layui.css">
+    <!-- <link rel="stylesheet" type="text/css" href="js/lib/layer-v2.3/layer.less"> -->
     <link rel="stylesheet" type="text/css" href="css/global.css">
-    <!-- <script src="css/global.css" type="text/javascript" charset="utf-8" async defer></script> -->
-    <!-- <link href="http://static.jtljia.com/css/common/common/common.css?v=20171129001" rel="stylesheet"> -->
-    <!-- <link href="http://static.jtljia.com/tools/js/storeSelect/StoreSelect.css" rel="stylesheet"> -->
-    <!-- <link rel="stylesheet" href="http://static.jtljia.com/css/html/index/index.css?v=20161024"> -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <script>
     function is_mobile() {
         var regex_match = /(nokia|iphone|android|motorola|^mot-|softbank|foma|docomo|kddi|up.browser|up.link|htc|dopod|blazer|netfront|helio|hosin|huawei|novarra|CoolPad|webos|techfaith|palmsource|blackberry|alcatel|amoi|ktouch|nexian|samsung|^sam-|s[cg]h|^lge|ericsson|philips|sagem|wellcom|bunjalloo|maui|symbian|smartphone|midp|wap|phone|windows ce|iemobile|^spice|^bird|^zte-|longcos|pantech|gionee|^sie-|portalmmm|jigs browser|hiptop|^benq|haier|^lct|operas*mobi|opera*mini|320x320|240x320|176x220)/i;
@@ -35,10 +34,12 @@
     }
     if (is_mobile()) {
         console.log(适配手机);
-        document.location.href = 'http://m.jtljia.com/';
+        // document.location.href = 'http://m.jtljia.com/';
     }
     </script>
     <script src="js/lib/jquery/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/layui-v2.2.5/layui.js" type="text/javascript"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="js/lib/layer-v2.3/layer.js"> -->
 </head>
 
 <body>
@@ -72,7 +73,103 @@
             </ul>
         </nav>
     </header>
-    <section class="containter">
+    <section class="containter index">
+        <div class="c-1">
+            <div class="c-1-l">
+                <h1>快速报价</h1>
+                <div class="image"></div>
+                <div class="f-t">
+                    <h2>我家装修多少钱？</h2>
+                </div>
+                <div class="f-c" id="f-c">
+                    <input type="" name="户型" placeholder="户型" />
+                    <input type="" name="面积" placeholder="建筑面积" />
+                    <input type="" name="手机号码" placeholder="请填写您的手机号码" />
+                    <div class="btn">立即获取报价</div>
+                </div>
+            </div>
+            <div class="c-1-r">
+                <div class="layui-carousel" id="test1">
+                    <div carousel-item>
+                        <div style="background-color: red">条目1</div>
+                        <div style="background-color: blue">条目2</div>
+                        <div style="background-color: #999">条目3</div>
+                        <div style="background-color: #987">条目4</div>
+                        <div style="background-color: #000">条目5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-2">
+            <ul>
+                <li>
+                    <h1>科技筑家</h1>
+                    <p>科技筑家有生活更有品质</p>
+                    <div class="btn">点击查看</div>
+                </li>
+                <li>
+                    <h1>乐享家装</h1>
+                    <p>不一样的feel不一样的生活</p>
+                    <div class="btn">点击查看</div>
+                </li>
+                <li>
+                    <h1>精选套餐</h1>
+                    <p>四大套餐总有一套适合您</p>
+                    <div class="btn">点击查看</div>
+                </li>
+                <li>
+                    <h1>极致服务</h1>
+                    <p>专注打造属于您的家居梦想</p>
+                    <div class="btn">点击查看</div>
+                </li>
+            </ul>
+        </div>
+        <div class="c-3">
+            <div class="progress-title"></div>
+            <div class="progress-show">
+                <ul>
+                    <a class="active" href="http://www.jtljia.com/price/" target="_blank">
+                        <div class="liucheng-icon"></div>
+                        <div class="liucheng-content">快速报价</div>
+                    </a>
+                    <a class="blank">
+                        <div class="next-icon" data-icon="liucheng" style="width: 22px; height: 32px; background-image: url(&quot;http://static.jtljia.com/images/icon/jtlicon.png&quot;); background-repeat: no-repeat; background-position: -444px -210px;"></div>
+                    </a>
+                    <a class="active" href="http://www.jtljia.com/retail/" target="_blank">
+                        <div class="liucheng-icon"></div>
+                        <div class="liucheng-content">直营店体验</div>
+                    </a>
+                    <a class="blank">
+                        <div class="next-icon" data-icon="liucheng" style="width: 22px; height: 32px; background-image: url(&quot;http://static.jtljia.com/images/icon/jtlicon.png&quot;); background-repeat: no-repeat; background-position: -444px -210px;"></div>
+                    </a>
+                    <a class="active" href="http://www.jtljia.com/html/temp/active/measure/" target="_blank">
+                        <div class="liucheng-icon"></div>
+                        <div class="liucheng-content">设计量房</div>
+                    </a>
+                    <a class="blank">
+                        <div class="next-icon" data-icon="liucheng" style="width: 22px; height: 32px; background-image: url(&quot;http://static.jtljia.com/images/icon/jtlicon.png&quot;); background-repeat: no-repeat; background-position: -444px -210px;"></div>
+                    </a>
+                    <a class="active" href="http://www.jtljia.com/html/temp/active/construction/" target="_blank">
+                        <div class="liucheng-icon"></div>
+                        <div class="liucheng-content">标准化施工</div>
+                    </a>
+                    <a class="blank">
+                        <div class="next-icon" data-icon="liucheng" style="width: 22px; height: 32px; background-image: url(&quot;http://static.jtljia.com/images/icon/jtlicon.png&quot;); background-repeat: no-repeat; background-position: -444px -210px;"></div>
+                    </a>
+                    <a class="active">
+                        <div class="liucheng-icon"></div>
+                        <div class="liucheng-content">五星质检验收</div>
+                    </a>
+                    <a class="blank">
+                        <div class="next-icon" data-icon="liucheng" style="width: 22px; height: 32px; background-image: url(&quot;http://static.jtljia.com/images/icon/jtlicon.png&quot;); background-repeat: no-repeat; background-position: -444px -210px;"></div>
+                    </a>
+                    <a class="active">
+                        <div class="liucheng-icon"></div>
+                        <div class="liucheng-content br">品质保障 售后无忧</div>
+                    </a>
+                </ul>
+            </div>
+        </div>
     </section>
     <footer id="footer">
         <div class="f_content">
