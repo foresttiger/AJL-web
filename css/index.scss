@@ -1,3 +1,6 @@
+$liucheng-icon:url("../images/index/indexLiuCheng.png");
+$pd30:30px;
+$pd20:20px;
 .index {
     display: inline-block;
     padding-top: 10px;
@@ -172,7 +175,11 @@
         }
     }
     .c-3 {
-        .progress-title {
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        padding: $pd20 0 $pd30 0; // padding-bottom:$30;
+        .c-3-title {
             width: 100%;
             height: 60px;
             background: url(http://static.jtljia.com/images/system/index/index-liucheng.jpg) center center no-repeat;
@@ -187,20 +194,66 @@
             color: #666;
             text-align: center;
             position: relative;
+            .liucheng-icon {
+                margin: 30px auto 20px;
+                background-image: $liucheng-icon;
+            }
             &:nth-child(1)>.liucheng-icon {
                 width: 39px;
                 height: 46px;
                 background-position: 0 -138px;
             }
-            &:nth-child(2)>.liucheng-icon {
-                width: 39px;
-                height: 46px;
-                background-position: 0 -138px;
+            &:nth-child(1):hover {
+                .liucheng-icon {
+                    background-position: -43px -150px;
+                }
             }
             &:nth-child(3)>.liucheng-icon {
-                width: 39px;
+                width: 32px;
+                height: 42px;
+                background-position: -88px -100px;
+            }
+            &:nth-child(3):hover {
+                .liucheng-icon {
+                    background-position: -86px -196px;
+                }
+            }
+            &:nth-child(5)>.liucheng-icon {
+                width: 46px;
                 height: 46px;
-                background-position: 0 -138px;
+                background-position: -71px -50px;
+            }
+            &:nth-child(5):hover {
+                .liucheng-icon {
+                    background-position: -71px 0px;
+                }
+            }
+            &:nth-child(7)>.liucheng-icon {
+                width: 40px;
+                height: 46px;
+                background-position: 0 -88px;
+            }
+            &:nth-child(7):hover {
+                .liucheng-icon {
+                    background-position: -44px -100px;
+                }
+            }
+            &:nth-child(9)>.liucheng-icon {
+                width: 67px;
+                height: 40px;
+                background-position: 0 -44px;
+            }
+            &:nth-child(11)>.liucheng-icon {
+                width: 37px;
+                height: 42px;
+                background-position: -86px -150px;
+            }
+            &:nth-child(1):hover,
+            &:nth-child(3):hover,
+            &:nth-child(5):hover,
+            &:nth-child(7):hover {
+                border-color: #d5bb55;
+                color: #d5bb55;
             }
         }
 
@@ -208,6 +261,13 @@
             width: 69px;
             height: 142px;
             float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .c-3-show {
+            width: 1200px;
+            margin: 0 auto;
         }
     }
 }
