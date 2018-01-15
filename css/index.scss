@@ -279,20 +279,29 @@ $pd20:20px;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        height: 560px;
+        height: 580px;
         background-color: #f2f2f2;
         .c-4-title {
-            font-size: 0.26rem;
+            color: #333;
+            font-size: 0.26rem; // margin: 0 0 30px 0;
+        }
+        p {
+            font-size: 0.16rem;
+            color: #999;
+            ;
             margin: 0 0 30px 0;
         }
         .c-4-grid {
             ul {
                 display: flex;
                 justify-content: space-between;
-                width: 1200px;
+                width: 1180px;
                 li {
+                    // width: 380px;
                     display: flex;
                     flex-direction: column;
+                    box-shadow: 0 0 4px 4px #ddd;
+                    cursor: pointer;
                     div {
                         width: 100%;
                         height: 80px;
@@ -302,7 +311,22 @@ $pd20:20px;
                         align-items: center;
                         background-color: #ffffff;
                     }
-
+                    &:hover img {
+                        transform: scale(1.05);
+                    }
+                    a.img {
+                        display: block;
+                        width: 100%;
+                        height: 290px;
+                        overflow: hidden;
+                    }
+                    img {
+                        width: 380px;
+                        ;
+                        height: 290px;
+                        overflow: hidden;
+                        transition: all .3s linear;
+                    }
                     &:nth-child(1) div {
                         &:before {
                             display: block;
@@ -341,6 +365,32 @@ $pd20:20px;
                     }
                 }
             }
+        }
+    }
+    .c-5 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 530px;
+        background: url(../images/index/budget.jpg) no-repeat center center;
+        .c-5-title {
+            color: #333;
+            font-size: 0.26rem; // margin: 0 0 30px 0;
+        }
+        p {
+            font-size: 0.16rem;
+            color: #999;
+            ;
+            margin: 0 0 30px 0;
+        }
+        .c-5-content {
+            width: 1180px;
+            height: 350px;
+            padding: 10px;
+            margin: 30px auto 0;
+            background: #fff;
         }
     }
 }
