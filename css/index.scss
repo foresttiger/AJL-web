@@ -271,72 +271,73 @@ $pd20:20px;
             margin: 0 auto;
         }
     }
-}
 
-.c-4 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 560px;
-    background-color: #f2f2f2;
-    .c-4-title {
-        font-size: 0.26rem;
-        margin: 0 0 30px 0;
-    }
-    .c-4-grid {
-        ul {
-            display: flex;
-            justify-content: space-between;
-            width: 1200px;
-            li {
+
+    .c-4 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 560px;
+        background-color: #f2f2f2;
+        .c-4-title {
+            font-size: 0.26rem;
+            margin: 0 0 30px 0;
+        }
+        .c-4-grid {
+            ul {
                 display: flex;
-                flex-direction: column;
-                div {
-                    width: 100%;
-                    height: 80px;
-                    font-size: 0.23rem;
+                justify-content: space-between;
+                width: 1200px;
+                li {
                     display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    background-color: #ffffff;
-                }
+                    flex-direction: column;
+                    div {
+                        width: 100%;
+                        height: 80px;
+                        font-size: 0.23rem;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        background-color: #ffffff;
+                    }
 
-                &:nth-child(1) div {
-                    &:before {
-                        display: block;
-                        content: "元/m²";
-                        text-indent: 30px;
-                        background: url(../images/index/q.png) no-repeat 0% 0%;
+                    &:nth-child(1) div {
+                        &:before {
+                            display: block;
+                            content: "元/m²";
+                            text-indent: 30px;
+                            background: url(../images/index/q.png) no-repeat 0% 0%;
+                        }
+                        &:after {
+                            display: block;
+                            content: "舒适包"
+                        }
                     }
-                    &:after {
-                        display: block;
-                        content: "舒适包"
+                    &:nth-child(2) div {
+                        &:before {
+                            display: block;
+                            content: "元/m²";
+                            text-indent: 30px;
+                            background: url(../images/index/q.png) no-repeat 0% 0%;
+                        }
+                        &:after {
+                            display: block;
+                            content: "品质包"
+                        }
                     }
-                }
-                &:nth-child(2) div {
-                    &:before {
-                        display: block;
-                        content: "元/m²";
-                        text-indent: 30px;
-                        background: url(../images/index/q.png) no-repeat 0% 0%;
-                    }
-                    &:after {
-                        display: block;
-                        content: "品质包"
-                    }
-                }
-                &:nth-child(3) div {
-                    &:before {
-                        display: block;
-                        content: "元/m²";
-                        text-indent: 30px;
-                        background: url(../images/index/q.png) no-repeat 0% 0%;
-                    }
-                    &:after {
-                        display: block;
-                        content: "尊享包"
+                    &:nth-child(3) div {
+                        &:before {
+                            display: block;
+                            content: "元/m²";
+                            text-indent: 30px;
+                            background: url(../images/index/q.png) no-repeat 0% 0%;
+                        }
+                        &:after {
+                            display: block;
+                            content: "尊享包"
+                        }
                     }
                 }
             }
