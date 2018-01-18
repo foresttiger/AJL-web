@@ -141,9 +141,10 @@ button.navbar-toggle {
             .l_img {
                 width: 164px;
                 height: 40px;
-                background-image: $backgroundImg;
-                background-repeat: no-repeat;
-                background-position: -347px -124px;
+                background: url(../images/logo.png) no-repeat;
+                // background-image: $backgroundImg;
+                // background-repeat: no-repeat;
+                // background-position: -347px -124px;
                 margin-right: 20px;
             }
             .l_o {
@@ -353,9 +354,10 @@ button.navbar-toggle {
                     	content:"";
                         width: 120px;
                         height: 120px;
-                        background-image: $backgroundImg;
-                        background-repeat: no-repeat;
-                        background-position: 0px -124px;
+                        background:url(../images/gzh.jpg) no-repeat;
+                        // background-image: $backgroundImg;
+                        // background-repeat: no-repeat;
+                        // background-position: 0px -124px;
                         margin-bottom: 6px;
                     }
                 }

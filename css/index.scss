@@ -168,8 +168,23 @@ $pd20:20px;
                     content: "";
                     display: block;
                     width: 74px;
-                    height: 74px;
-                    background-color: #ffd401;
+                    height: 74px; // background-color: #ffd401;
+                }
+                &:nth-child(1):after {
+                    background: url(../images/index/icon1.png) no-repeat 0% 50%;
+                }
+                &:nth-child(2):after {
+                    background: url(../images/index/icon2.png) no-repeat 0% 50%;
+                }
+                &:nth-child(3):after {
+                    background: url(../images/index/icon3.png) no-repeat 0% 50%;
+                    background-size:80%
+
+
+                }
+                &:nth-child(4):after {
+                    background: url(../images/index/icon4.png) no-repeat 0% 50%;
+                    background-size:85%
                 }
             }
         }
@@ -639,7 +654,7 @@ $pd20:20px;
                         justify-content: center;
                         align-items: center;
                         content: "美式";
-                        font-weight:bold;
+                        font-weight: bold;
                         background: rgba(0, 0, 0, 0.15);
                         border: 1px solid rgba(255, 255, 255, 0.4);
                     }
