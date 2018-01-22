@@ -12,7 +12,7 @@ $pd20:20px;
         .c-1-l {
             width: 240px;
             height: 500px;
-            padding: 20px 25px;
+            padding: 0 25px;
             float: left;
             background: #ffd401;
             display: flex;
@@ -30,7 +30,7 @@ $pd20:20px;
             .image {
                 width: 240px;
                 height: 108px;
-                margin: 30px auto 40px;
+                margin: 10px auto 20px;
                 background: url(../images/index/index-coupon.png) center center no-repeat;
             }
             .f-t {
@@ -99,22 +99,45 @@ $pd20:20px;
         }
         .c-1-r {
             width: 900px;
-            height: 540px;
+            height: 500px;
             float: left;
             margin-left: 10px;
             .layui-carousel-ind ul {
                 background-color: rgba(0, 0, 0, 0); // background-color:none;
                 li {
+                    width: 8px;
+                    height: 8px;
                     background-color: rgba(0, 0, 0, 0);
-                    border: 2px solid #ffffff;
+                    border: 1px solid #ffffff;
                     &.layui-this {
                         background-color: #ffd401;
                         border-color: #ffd401;
                     }
                 }
             }
-            .item5{
-                background:url(../images/index/banner1.png) no-repeat;
+            .item1 {
+                background: url(../images/index/banner1.png) no-repeat;
+                background-image-size: 900px 500px;
+            }
+            .item2 {
+                background: url(../images/index/banner2.png) no-repeat;
+                background-image-size: 900px 500px;
+            }
+            .item3 {
+                background: url(../images/index/banner3.png) no-repeat;
+                background-image-size: 900px 500px;
+            }
+            .item4 {
+                background: url(../images/index/banner4.png) no-repeat;
+                background-image-size: 900px 500px;
+            }
+            .item5 {
+                background: url(../images/index/banner5.png) no-repeat;
+                background-image-size: 900px 500px;
+            }
+             .item6 {
+                background: url(../images/index/banner6.png) no-repeat;
+                background-image-size: 900px 500px;
             }
         }
     }
@@ -181,13 +204,11 @@ $pd20:20px;
                 }
                 &:nth-child(3):after {
                     background: url(../images/index/icon3.png) no-repeat 0% 50%;
-                    background-size:80%
-
-
+                    background-size: 80%
                 }
                 &:nth-child(4):after {
                     background: url(../images/index/icon4.png) no-repeat 0% 50%;
-                    background-size:85%
+                    background-size: 85%
                 }
             }
         }

@@ -50,7 +50,7 @@ layui.use('carousel', function() {
     carousel.render({
         elem: '#test1',
         width: '100%', //设置容器宽度
-        height: '540px', //设置容器高度
+        height: '500px', //设置容器高度
         arrow: 'hover', //始终显示箭头
         anim:'fade',
         //,anim: 'updown' //切换动画方式
