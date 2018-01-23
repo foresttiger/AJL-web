@@ -107,11 +107,13 @@ body {
     -webkit-user-select: none;
     -webkit-text-size-adjust: none;
 }
-h1{
+
+h1 {
     font-size: 20px;
 }
-h2{
-    font-size:18px;
+
+h2 {
+    font-size: 18px;
 }
 
 button.navbar-toggle {
@@ -139,13 +141,13 @@ button.navbar-toggle {
             align-items: center;
             text-align: center;
             .l_img {
-                width: 164px;
+                width: 144px;
                 height: 40px;
-                background: url(../images/logo.png) no-repeat;
-                // background-image: $backgroundImg;
+                background: url(../images/logo.png) no-repeat; // background-image: $backgroundImg;
                 // background-repeat: no-repeat;
                 // background-position: -347px -124px;
-                margin-right: 20px;
+                margin-right: 10px;
+                background-size: 144px;
             }
             .l_o {
                 color: #999;
@@ -332,8 +334,7 @@ button.navbar-toggle {
                 .z_phone {}
                 .b_phone {}
                 .li_item {
-                    margin-top:20px;
-                    // height: 151px;
+                    margin-top: 20px; // height: 151px;
                     width: 155px;
                     padding: 0 72px 0 0;
                     background: $bottomImg no-repeat center center;
@@ -341,32 +342,30 @@ button.navbar-toggle {
                 }
             }
             .code {
-            	.li_item{
-            		display: flex;
-            		justify-content: center;
-
-            	}
+                .li_item {
+                    display: flex;
+                    justify-content: center;
+                }
                 .wechat {
-                	margin:12px;
-                	text-align: center;
+                    margin: 12px;
+                    text-align: center;
                     &:before {
-                    	display: block;
-                    	content:"";
+                        display: block;
+                        content: "";
                         width: 120px;
                         height: 120px;
-                        background:url(../images/gzh.jpg) no-repeat;
-                        // background-image: $backgroundImg;
+                        background: url(../images/gzh.jpg) no-repeat; // background-image: $backgroundImg;
                         // background-repeat: no-repeat;
                         // background-position: 0px -124px;
                         margin-bottom: 6px;
                     }
                 }
                 .app {
-                	margin:12px;
-                	text-align: center;
+                    margin: 12px;
+                    text-align: center;
                     &:before {
-                    	display: block;
-                    	content:"";
+                        display: block;
+                        content: "";
                         width: 120px;
                         height: 120px;
                         background-image: $backgroundImg;
