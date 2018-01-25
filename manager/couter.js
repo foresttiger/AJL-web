@@ -32,14 +32,15 @@
                           { field: 'status', title: '状态', sort: true, align: "center", edit: 'text',templet: '#statusTpl' }
                       ]
                   ],
+                  cellMinWidth: 80,
                   height: 'full-200',
                   data: data
                       //,skin: 'line' //表格风格
                       ,
                   even: true,
                   page: true, //是否显示分页
-                  limits: [10, 15, 20],
-                  limit: 10 //每页默认显示的数量
+                  limits: [50, 100, 200],
+                  limit: 50 //每页默认显示的数量
               });
               //监听单元格编辑
               table.on('edit(quote)', function(obj) {
