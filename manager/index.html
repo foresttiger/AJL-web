@@ -20,7 +20,7 @@
     </div> -->
     <div class="contaner">
         <h1>客户列表</h1>
-        <table class="layui-hide" id="demo" width="1200"></table>
+        <table class="layui-hide" id="demo" lay-filter="quote"></table>
     </div>
     <script type="text/html" id="barDemo">
         <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
@@ -30,6 +30,20 @@
     <script src="../js/lib/jquery/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="../js/lib/layui-v2.2.5/layui.js" charset="utf-8"></script>
     <script src="couter.js" charset="utf-8"></script>
+    <script type="text/html" id="cellnameTpl">
+        <a class="layui-table-link" target="_blank">{{ d.cellname }}</a>
+    </script>
+    <script type="text/html" id="statusTpl">
+        {{# if(d.status === '已签单'){ }} 
+                <span style="color: red;">{{ d.status }}</span> 
+                {{# } else if(d.status === '已完成') { }}    
+                  <span style="color: green;">{{ d.status }}</span>    
+                {{# } else { }}     {{ d.status }}    {{# } }}
+        
+    </script>
 </body>
 
 </html>
+ <!-- {{# } else { }}     {{ d.status }}    {{# } }} -->
+<!-- {{# if(d.status === '已签单'||d.status === '已完成'){ }}
+<span style="color: red;">{{ d.status }}</span> {{# } else { }} {{ d.status }} {{# } }} -->
