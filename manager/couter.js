@@ -28,7 +28,7 @@
                           { field: 'name', title: '名字', sort: true, width: 100, align: "center", edit: 'text' },
                           { field: 'mobilephone', title: '手机号码', sort: true, width: 120, align: "center", edit: 'text' },
                           { field: 'other', title: '备注', sort: true, edit: 'text' },
-                          { field: 'date', title: '日期', sort: true, align: "center", edit: 'text' },
+                          { field: 'date', title: '日期', sort: true, align: "center",width: 164, edit: 'text' },
                           { field: 'status', title: '状态', sort: true, align: "center", edit: 'text',templet: '#statusTpl' }
                       ]
                   ],

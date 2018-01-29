@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="../images/logo.ico">
     <link rel="shortcut icon" type="image/x-icon" href="../images/logo.ico">
     <!-- <link rel="stylesheet" href="couter.css"> -->
+    <!-- <link rel="stylesheet" href="couter.css"> -->
 </head>
 
 <body class="layui-layout-body">
@@ -25,16 +26,16 @@
                 <li class="layui-nav-item">
                     <a href="javascript:;">其它系统</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">邮件管理</a></dd>
-                        <dd><a href="">微信公众号</a></dd>
-                        <dd><a href="">微信小程序</a></dd>
+                        <dd><a href="https://qiye.aliyun.com/" target="_blank">邮件管理</a></dd>
+                        <dd><a href="https://mp.weixin.qq.com/" target="_blank">微信公众号</a></dd>
+                        <dd><a href="https://mp.weixin.qq.com/" target="_blank">微信小程序</a></dd>
                     </dl>
                 </li>
             </ul>
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
                     <a href="javascript:;">
-                      <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                      <img src="../images/logo.ico" style="width: 60px;" class="layui-nav-img">
                       AJLManager
                     </a>
                     <dl class="layui-nav-child">
@@ -86,7 +87,9 @@
         </div>
         <div class="layui-body">
             <!-- 内容主体区域 -->
-            <div style="padding: 15px;">内容主体区域</div>
+            <div style="padding: 15px;">
+                <table class="layui-hide" id="demo" lay-filter="quote"></table>
+            </div>
         </div>
         <div class="layui-footer">
             <!-- 底部固定区域 -->
@@ -97,13 +100,21 @@
     <script src="../js/lib/other/other.js" type="text/javascript" charset="utf-8"></script>
     <script src="../js/lib/layui-v2.2.5/layui.js" charset="utf-8"></script>
     <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
-
     <script>
     //JavaScript代码区域
     layui.use('element', function() {
         var element = layui.element;
 
     });
+    </script>
+    <script src="couter.js" charset="utf-8"></script>
+    <script type="text/html" id="cellnameTpl">
+        <a class="layui-table-link" target="_blank">{{ d.cellname }}</a>
+    </script>
+    <script type="text/html" id="statusTpl">
+        {{# if(d.status === '已签单'){ }}
+        <span style="color: red;">{{ d.status }}</span> {{# } else if(d.status === '已完成') { }}
+        <span style="color: green;">{{ d.status }}</span> {{# } else { }} {{ d.status }} {{# } }}
     </script>
 </body>
 
