@@ -99,15 +99,19 @@ $(function() {
     });
 
     function getQuote(options, type, $dom) {
-        fetch('http://rainingjoy.xin:9111/saveOrUpdate', {
+        fetch('http://rainingjoy.xin:9111/saveOrUpdate?dataType=pc', {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(options)
             }).then((response) => response.text())
             .then((responseData) => { // 上面的转好的json
                 console.log(responseData)
-                layer.msg("信息提交成功咯，我们将很快联系您！")
-                $dom.find("input").val("");
+                if (responseData.status == "success") {
+                    layer.msg("信息提交成功咯，我们将很快联系您！")
+                    $dom.find("input").val("");
+                }else{
+                    layer.msg("提交失败，请重新提交！")
+                }
             })
     }
 })
