@@ -34,12 +34,14 @@ if (readCookies()) {
         var user = base.encode($("#user").val());
         var pwd = base.encode($("#pwd").val());
         if (user == "") {
-            $('<div id="msg" />').html("用户名不能为空！").appendTo('.sub').fadeOut(2000);
+            layer.msg("用户名不能为空！")
+            // $('<div id="msg" />').html("用户名不能为空！").appendTo('.sub').fadeOut(2000);
             $("#user").focus();
             return false;
         }
         if (pwd == "") {
-            $('<div id="msg" />').html("密码不能为空！").appendTo('.sub').fadeOut(2000);
+            layer.msg("密码不能为空！")
+            // $('<div id="msg" />').html("密码不能为空！").appendTo('.sub').fadeOut(2000);
             $("#pwd").focus();
             return false;
         }
@@ -49,14 +51,18 @@ if (readCookies()) {
             dataType: "json",
             data: { "user": user, "pwd": pwd },
             beforeSend: function() {
-                $('<div id="msg" />').addClass("loading").html("正在登录...").css("color", "#999").appendTo('.sub');
+                layer.msg('正在登录...', {
+                  icon: 16,
+                  time: 3000000,
+                  shade: [0.1,'#fff']
+
+                });
+                // $('<div id="msg" />').addClass("loading").html("正在登录...").css("color", "#999").appendTo('.sub');
             },
             success: function(json) {
                 addCookies(user, pwd, 168)
                 if (json.success == 1) {
-                    $("#login_form").remove();
-                    var div = "<div id='result'><p><strong></strong> 恭喜您登录成功！</p></div>"
-                    $("#login").append(div);
+                    layer.msg("登录成功！")
                     setTimeout(function() {
                         window.open("manager.html", '_self')
                     }, 1000)
@@ -68,15 +74,9 @@ if (readCookies()) {
             }
         });
     });
-    // //1.加密  
-    // var str = '124中文内容';
-    // var base = new Base64();
-    // var result = base.encode(str);
-    // console.log(result)
-    // //document.write(result);  
-    // //2.解密  
-    // var result2 = base.decode(result);
-    // console.log(result2)
-
-
+     document.onkeydown=function(){
+          if (event.keyCode == 13){
+            $(".btn").click()
+          }
+       }
 })(jQuery);

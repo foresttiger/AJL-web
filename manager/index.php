@@ -7,19 +7,25 @@
     <title>安居乐装饰</title>
     <link rel="icon" type="image/x-icon" href="../images/logo.ico">
     <link rel="shortcut icon" type="image/x-icon" href="../images/logo.ico">
+    <link rel="stylesheet" type="text/css" href="../js/lib/layui-v2.2.5/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../js/lib/layer-v2.3/layer.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
-<body>
+<body id="loginBody">
+
     <div id="login">
-        <h3>用户登录</h3>
+        <img src="images/logo.png" alt="">
+
+        <!-- <h3>用户登录</h3> -->
         <div id="login_form">
             <p>
-                <label>用户名：</label>
-                <input type="text" class="input" name="user" id="user" />
+                <!-- <label>用户名：</label> -->
+                <input type="text" placeholder="用户名" class="input" name="user" id="user" />
             </p>
             <p>
-                <label>密 码：</label>
-                <input type="password" class="input" name="pwd" id="pwd" />
+                <!-- <label>密 码：</label> -->
+                <input type="password" placeholder="密码" class="input" name="pwd" id="pwd" />
             </p>
             <div class="sub">
                 <input type="submit" class="btn" value="登 录" />
@@ -27,6 +33,8 @@
         </div>
     </div>
     <script src="../js/lib/jquery/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/lib/layui-v2.2.5/layui.js" type="text/javascript"></script>
+    <script src="../js/lib/layer-v2.3/layer.js" type="text/javascript"></script>
     <script src="../js/lib/other/other.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" src="js/login.js"></script>
 </body>
