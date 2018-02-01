@@ -106,7 +106,8 @@ $(function() {
             }).then((response) => response.text())
             .then((responseData) => { // 上面的转好的json
                 console.log(responseData)
-                if (responseData.status == "success") {
+                var data = JSON.parse(responseData);
+                if (data.status == "success") {
                     layer.msg("信息提交成功咯，我们将很快联系您！")
                     $dom.find("input").val("");
                 }else{

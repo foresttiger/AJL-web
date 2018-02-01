@@ -1,16 +1,17 @@
 <?php
-	$user = $_POST['name'];     
-    $cellname = $_POST['cellname'];
-    $address = $_POST['address'];
-    $components = $_POST['components'];
-    $area = $_POST['area'];
-    $style = $_POST['style'];
-    $budget = $_POST['budget'];
-    $type = $_POST['type'];
-    $name = $_POST['name'];
-    $mobilephone = $_POST['mobilephone'];
-    $date = $_POST['date'];
-    $other = $_POST['other'];
+
+    
+    $cellname = $_GET['cellname'];
+    $address = $_GET['address'];
+    $components = $_GET['components'];
+    $area = $_GET['area'];
+    $style = $_GET['style'];
+    $budget = $_GET['budget'];
+    $type = $_GET['type'];
+    $name = $_GET['name'];
+    $mobilephone = $_GET['mobilephone'];
+    $date = $_GET['date'];
+    $other = $_GET['other'];
     $con = mysql_connect("bdm256444540.my3w.com:3306","bdm256444540","ajladmin888");//建立mysql连接
     if (!$con)//判断连接是否成功
       {
