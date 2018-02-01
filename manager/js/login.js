@@ -26,7 +26,7 @@ function readCookies() {
     return has;
 }
 if (readCookies()) {
-    window.open("manager.html", '_self')
+    window.open("pages/manager.html", '_self')
 }
 (function($) {
     var base = new Base64();
@@ -64,11 +64,12 @@ if (readCookies()) {
                 if (json.success == 1) {
                     layer.msg("登录成功！")
                     setTimeout(function() {
-                        window.open("manager.html", '_self')
+                        window.open("pages/manager.html", '_self')
                     }, 1000)
                 } else {
                     $("#msg").remove();
-                    $('<div id="errmsg" />').html(json.msg).css("color", "#999").appendTo('.sub').fadeOut(2000);
+                    layer.msg(json.msg)
+                    // $('<div id="errmsg" />').html(json.msg).css("color", "#999").appendTo('.sub').fadeOut(2000);
                     return false;
                 }
             }

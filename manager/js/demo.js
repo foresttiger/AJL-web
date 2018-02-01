@@ -1,55 +1,14 @@
   $(function() {
-      loadDataToType("pc");
-      $("#order dd").click(function(e){
-        var dataType = $(this).attr("data-type");
-        loadDataToType(dataType);
-        console.log(dataType);
-      })
-      layui.use('form', function() {
-        var form = layui.form;
-        form.on('select(search_type)', function(data){
-          var type = $("#order dd.layui-this").attr("data-type");
-          if (data.value == "all") {
-            $(".searchData").val("");
-            loadDataToType(type);
-          }
-                console.log(data.elem); //得到select原始DOM对象
-                console.log(data.value); //得到被选中的值
-                console.log(data.othis); //得到美化后的DOM对象
-        }); 
-        form.on('submit(search_btn)', function(data){
-          var type = $("#order dd.layui-this").attr("data-type");
-          var string = data.field.row + '=' + data.field.dataString;
-          if (data.field.row == "all") {
-            string = undefined
-          }
-          loadDataToType(type,string);
-          // console.log(data.elem) //被执行事件的元素DOM对象，一般为button对象
-          // console.log(data.form) //被执行提交的form对象，一般在存在form标签时才会返回
-          // console.log(data.field) //当前容器的全部表单字段，名值对形式：{name: value}
-          return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
-        });
-      });
-      
-
-
-  })
-  /*更新数据*/
-  function loadDataToType(type,search){
-    var URL = search?("http://rainingjoy.xin:9111/getList?dataType=" + type + "&"+search):("http://rainingjoy.xin:9111/getAll?dataType=" + type)
-    // var URL = "http://rainingjoy.xin:9111/getAll?dataType=" + type;
-    $.ajax({
-          "url": URL,
+      $.ajax({
+          "url": 'http://rainingjoy.xin:9111/getAll?dataType=pc',
           "type": "get",
       }).done(function(data) {
-          renderOrderTable(data,type)
+          renderTable(data)
       }).fail(function(e) {
           console.log(e)
       });
 
-  }
-  function renderOrderTable(data,type) {
-      $(".tab-header h2").html($("#order dd[data-type="+ type +"]").find("a").text());
+      function renderTable(data) {
           layui.use('table', function() {
               var table = layui.table;
 
@@ -69,7 +28,7 @@
                           { field: 'price', title: '合同总价', width: 100, align: "center", edit: 'text' },
                           { field: 'name', title: '姓名', sort: true, width: 100, align: "center", edit: 'text' },
                           { field: 'mobilephone', title: '手机号码', sort: true, width: 120, align: "center", edit: 'text' },
-                          { field: 'other', title: '备注', sort: true,width: 180, edit: 'text' },
+                          { field: 'other', title: '备注', sort: true, edit: 'text' },
                           { field: 'date', title: '日期', sort: true, align: "center",width: 164, edit: 'text' },
                           { field: 'status', title: '状态', sort: true, align: "center", edit: 'text',templet: '#statusTpl' }
                       ]
@@ -95,15 +54,16 @@
                   // Object.assign(option,{userId:obj.data.userId})
                   // option[field] = value
                   // console.log(option)
-                  updataOrderData(obj.data,type)
+                  updataData(obj.data)
                   // layer.msg('[ID: ' + data.id + '] ' + field + ' 字段更改为：' + value);
               });
           });
 
       };
-  function updataOrderData(obj,type) {
-    var url = 'http://rainingjoy.xin:9111/saveOrUpdate?dataType=' + type
-      fetch(url, {
+  })
+  /*更新数据*/
+  function updataData(obj) {
+      fetch('http://rainingjoy.xin:9111/saveOrUpdate', {
               method: 'POST',
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(obj)
@@ -112,3 +72,43 @@
               console.log(responseData)
           })
   }
+  // fetch('http://rainingjoy.xin:9111/insert', {
+  //         method: 'POST',
+  //         headers: { "Content-Type": "application/json" },
+  //         body: JSON.stringify(obj)
+  //     }).then((response) => response.text())
+  //     .then((responseData) => { // 上面的转好的json
+  //         console.log(responseData)
+  //     })
+  // $.ajax({
+  //     type: "post",
+  //     url: "http://rainingjoy.xin:9111/insert",
+  //     dataType: "application/json",
+  //     data: JSON.stringify(obj),
+  //     success: function(data) {
+  //         console.log(data)
+  //     },
+  //     error: function(e) {
+  //         console.log(e)
+  //     }
+  // })
+  // $.ajax({
+  //     "url": 'http://rainingjoy.xin:9111/insert',
+  //     "type": "post",
+  //     contentType: 'application/json',
+  //     "data": JSON.stringify(obj)
+  // }).done(function(data) {
+  //     console.log(data);
+  // }).fail(function(e) {
+  //     console.log(e)
+  // });
+  /*获取*/
+  // rainingjoy.xin:9111/getList
+  // $.ajax({
+  //     "url": 'http://rainingjoy.xin:9111/getList?name="adasd"',
+  //     "type": "get",
+  // }).done(function (data) {
+  //     console.log(data);
+  // }).fail(function (e) {
+  //  console.log(e)
+  // });

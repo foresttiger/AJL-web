@@ -1,11 +1,29 @@
 $("#logo_out").click(function() {
-    delCookie();
-    window.open("www.gxajl.com/manager", '_self')
+    // delCookie();
+    // $.cookie('QWpsbWFuYWdlcg',null);
+    delAllCookie();
+    window.location.href = "http://www.gxajl.com/manager/index.php"
 })
-
-function delCookie() {
-    var name = "QWpsbWFuYWdlcg"
-    var date = new Date();
-    date.setTime(date.getTime() - 10000);
-    document.cookie = name + "=a; expires=" + date.toGMTString();
-}
+function getCookie($name){    
+            var data=document.cookie;    
+            var dataArray=data.split("; ");    
+          for(var i=0;i<dataArray.length;i++){    
+              var varName=dataArray[i].split("=");    
+                if(varName[0]==$name){    
+                     return decodeURI(varName[1]);    
+                }                    
+     
+         }    
+      }    
+       //删除cookie中所有定变量函数    
+       function delAllCookie(){    
+            var myDate=new Date();    
+            myDate.setTime(-1000);//设置时间    
+            var data=document.cookie;    
+            var dataArray=data.split("; ");    
+            for(var i=0;i<dataArray.length;i++){    
+                 var varName=dataArray[i].split("=");    
+                 document.cookie=varName[0]+"=''; expires="+myDate.toGMTString();    
+            }    
+                          
+      }
