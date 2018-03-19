@@ -363,7 +363,7 @@ button.navbar-toggle {
                         margin-bottom: 6px;
                     }
                 }
-                .app {
+                .miniprograms {
                     margin: 12px;
                     text-align: center;
                     &:before {
@@ -371,10 +371,9 @@ button.navbar-toggle {
                         content: "";
                         width: 120px;
                         height: 120px;
-                        background-image: $backgroundImg;
-                        background-repeat: no-repeat;
-                        background-position: -319px 0px;
+                        background: url(../images/miniprograms.png) no-repeat center;
                         margin-bottom: 6px;
+                        background-size: 120px;
                     }
                 }
             }
